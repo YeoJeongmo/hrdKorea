@@ -54,6 +54,7 @@ try {
 				grade = "직원";
 				break;
 		}
+// html 코드를 작성할때는 자바코드를 닫아주고 작성해준다.
 %>
 		<tr>
 			<td><%=rs.getString("custno") %></td>
