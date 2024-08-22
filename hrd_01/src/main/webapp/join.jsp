@@ -21,11 +21,15 @@
 				width: 100%;
 				">
 <h2 style="text-align: center;">홈쇼핑 회원 등록</h2>
-<form name="frm"
+<form 	method="post"
+		action="action.jsp"
+		name="frm"
 		style="display:flex;
-		align-items: center;
-		justify-content: center;"
+			align-items: center;
+			justify-content: center;"
 		>
+
+	<input type="hidden" name="mode" value="insert">
 
 	<table border="1">
 		<%
