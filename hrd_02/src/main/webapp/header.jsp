@@ -26,14 +26,14 @@
 		position: fixed;
 		left: 0px;
 		top: 40px;
-		background-color: black;
+		background-color: #e2e2e2;
 		color: white;
 		width: 100%;
 		height: 20px;
 		line-height: 20px;
 		font-size: 15px;
 		">
-&nbsp;&nbsp;회원등록 &nbsp;&nbsp;회원목록조회/수정&nbsp;&nbsp;회원매출조회&nbsp;&nbsp;&nbsp;&nbsp;홈으로.
+&nbsp;&nbsp;<a href="join.jsp">회원등록</a> &nbsp;&nbsp;<a href="list.jsp">회원목록조회/수정</a>&nbsp;&nbsp;<a href="salery.jsp">회원매출조회</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.jsp">홈으로.</a>
 </nav>
 
 </body>

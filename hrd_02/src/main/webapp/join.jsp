@@ -1,3 +1,5 @@
+<%@page import="java.sql.*"%>
+<%@page import="DBPKG.Util"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,6 +9,8 @@
 <title>join</title>
 </head>
 <body>
+
+<script type="text/javascript" src="check2.js"></script>
 
 <jsp:include page="header.jsp"></jsp:include>
 
@@ -20,17 +24,35 @@
 
 	<h3>홈쇼핑 화면 등록</h3>
 	<form method="post"
-		name="frm"
+		action = "action.jsp"
+		name="frm2"
 		style="
 			display: flex;
 			justify-content: center;
 			align-content: center;
 			width: 100%;"
 		>
+		<input type="hidden" name="mode" value="insert">
 		<table border="1">
+<%
+Connection conn = null;
+Statement stmt = null;
+String custno = "";
+
+try {
+	conn = Util.getConnection();
+	stmt = conn.createStatement();
+	String sql = "SELECT max(custno)+1 custno FROM member_tbl_02";
+	ResultSet rs = stmt.executeQuery(sql);
+	rs.next();
+	custno = rs.getString("custno");
+}catch (Exception e){
+	e.printStackTrace();
+}
+%>
 			<tr>
 				<td>회원정보(자동발생)</td>
-				<td><input type="text" name="custno"></td>
+				<td><input type="text" name="custno" value="<%=custno %>" readonly></td>
 			</tr>
 			<tr>
 				<td>회원성명</td>
@@ -58,8 +80,8 @@
 			</tr>
 			<tr>
 				<td colspan="2">
-					<input type="submit" value="등록">
-					<input type="button" value="조회">
+					<input type="submit" value="등록" onclick="return joinCheck()">
+					<input type="button" value="조회" onclick="return search()">
 				</td>
 			</tr>
 		</table>
@@ -67,5 +89,6 @@
 </section>
 
 <jsp:include page="footer.jsp"></jsp:include>
+
 </body>
 </html>
