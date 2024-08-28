@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>salery</title>
+<title>salary</title>
 </head>
 <body>
 
