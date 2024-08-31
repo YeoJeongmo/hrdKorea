@@ -3,5 +3,6 @@
   <module moduleId="org.eclipse.jst.jee.server:hrd_03" serverId="Tomcat v8.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:hrd_02" serverId="Tomcat v8.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:hrd_01" serverId="Tomcat v8.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:hrd_05" serverId="Tomcat v8.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:hrd_04" serverId="Tomcat v8.0 Server at localhost"/>
 </modules>
