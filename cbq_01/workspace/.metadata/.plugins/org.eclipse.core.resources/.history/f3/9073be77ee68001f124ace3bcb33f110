@@ -1,0 +1,12 @@
+function addCheck(){
+	if(frm.resistMonth.value.length == 0) {
+		alert("수강월이 입력되지 않았습니다.");
+		frm.resistMonth.focus();
+		return false;
+	}
+	if(frm.cName.value == 0) {
+		alert("회원명이 입력되지 않았습니다.");
+		frm.cName.focus();
+		return false;
+	}
+}

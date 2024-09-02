@@ -1,0 +1,57 @@
+<%@page import="DBPKG.Util"%>
+<%@page import="java.sql.*"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+request.setCharacterEncoding("UTF-8");
+String resist_month = request.getParameter("resistMonth");
+String c_no = request.getParameter("cNo");
+String class_area = request.getParameter("classArea");
+String class_name = request.getParameter("className");
+String teacher_code = "";
+String tuition = request.getParameter("tuition");
+
+try {
+	Connection conn = Util.getConnection();
+	String sql = "insert into tbl_class_202201 values ('?', '?', '?', ?, '?')";
+	PreparedStatement pstmt = conn.prepareStatement(sql);
+	switch(class_name){
+	case "100000" :
+		teacher_code = "100";
+		break;
+	case "200000" :
+		teacher_code = "200";
+		break;
+	case "300000" :
+		teacher_code = "300";
+		break;
+	case "400000" :
+		teacher_code = "400";
+		break;
+	}
+	switch(class_name){
+	case "100000" :
+		teacher_code = "100";
+		break;
+	case "200000" :
+		teacher_code = "200";
+		break;
+	case "300000" :
+		teacher_code = "300";
+		break;
+	case "400000" :
+		teacher_code = "400";
+		break;
+	}
+	pstmt.setString(1, resist_month);
+	pstmt.setString(2, c_no);
+	pstmt.setString(3, class_area);
+	pstmt.setString(4, teacher_code);
+	pstmt.setString(5, tuition);
+	
+	pstmt.executeUpdate();
+	
+} catch (Exception e){
+	e.printStackTrace();
+}
+%>
