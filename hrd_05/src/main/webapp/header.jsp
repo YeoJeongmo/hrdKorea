@@ -11,10 +11,10 @@
 (과정평가형 정보처리산업기사) 자율좌석예약 프로그램 ver 2024-08
 </header>
 <nav style="position: fixed; top: 40px; left: 0px; width:100%; height: 20px; line-height: 20px; font-size: 15px; background-color: #e2e2e2; color: black;">
-&nbsp;&nbsp;<a> 근무좌석예약 </a>
-&nbsp;&nbsp;<a> 좌석예약조회 </a>
-&nbsp;&nbsp;<a> 근무일수집계 </a>
-&nbsp;&nbsp;<a> 홈으로 </a>
+&nbsp;&nbsp;<a href="insert.jsp"> 근무좌석예약 </a>
+&nbsp;&nbsp;<a href="list.jsp"> 좌석예약조회 </a>
+&nbsp;&nbsp;<a href="count.jsp"> 근무일수집계 </a>
+&nbsp;&nbsp;<a href="index.jsp"> 홈으로 </a>
 </nav>
 </body>
 </html>
