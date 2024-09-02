@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+request.setCharacterEncoding("UTF-8");
+String score = "";
+try {
+	Connection conn = Util.getConnection();
+	String sql = "select st.stuid, st.sname, su.subname, su.subcode, su.proname, sc.midscore, sc.finalscore, sc.attend, sc.report, sc.etc, ROUND((sc.midscore + sc.finalscore + sc.attend + sc.report + sc.etc)/5), round(sc.midscore*0.3+sc.finalscore*0.3+sc.attend*0.2+sc.report*0.1+sc.etc*0.1, 1) from tbl_student_202210 st, tbl_score_202210 sc, tbl_subject_202210 su where st.stuid=sc.sid and su.subcode=sc.subcode";
+	PreparedStatement pstmt = conn.prepareStatement(sql);
+	ResultSet rs = pstmt.executeQuery();
+} catch (Exception e){
+	e.printStackTrace();
+}
+%>

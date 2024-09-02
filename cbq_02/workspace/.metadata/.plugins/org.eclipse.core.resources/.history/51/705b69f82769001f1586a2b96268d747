@@ -1,0 +1,46 @@
+<%@page import="DBPKG.Util"%>
+<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<jsp:include page="header.jsp"></jsp:include>
+
+<section style="position: fixed; top: 60px; width: 100%;">
+	<h2 style="text-align: center;">성젹현황</h2>
+	<form name="frm" style="display: flex; width: 100%; justify-content: center; text-align: center">
+		<table border="1">
+			<tr>
+				<td> 학번 </td>
+				<td> 성명 </td>
+				<td> 교과목 </td>
+				<td> 교과목코드 </td>
+				<td> 담당교수 </td>
+				<td> 중간 </td>
+				<td> 기말 </td>
+				<td> 출석 </td>
+				<td> 레포트 </td>
+				<td> 기타 </td>
+				<td> 평균 </td>
+			</tr>
+<%
+request.setCharacterEncoding("UTF-8");
+
+try {
+	Connection conn = Util.getConnection();
+	String sql = "select st.stuid, st.sname, su.subname, su.subcode, su.proname, sc.midscore, sc.finalscore, sc.attend, sc.report, sc.etc, avg(sc.midscore*0.3 + sc.finalscore*0.3 + sc.attend*0.2 + sc.report*0.1 + sc.etc*0.1)";
+} catch (Exception e){
+	e.printStackTrace();
+}
+%>
+		</table>
+	</form>
+</section>
+<jsp:include page="footer.jsp"></jsp:include>
+</body>
+</html>

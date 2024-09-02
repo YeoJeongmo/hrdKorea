@@ -1,0 +1,43 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<jsp:include page="header.jsp"></jsp:include>
+
+<section style="position: fixed; top: 60px; width: 100%;">
+	<h2 style="text-align: center;">과목별 성적조회</h2>
+	<form style="display: flex; width: 100%; justify-content: center; align-content: center; text-align: center">
+		<table border="1">
+			<tr>
+				<td> 과목코드 </td>
+				<td> <input type="text" name="sub_code"> </td>
+				<td> <input type="button" value="조회"> </td>
+			</tr>
+		</table>
+	</form>
+	<form style="display: flex; width: 100%; justify-content: center; text-align: center">
+		<table border="1">
+			<tr>
+				<td> 학번 </td>
+				<td> 성명 </td>
+				<td> 학과 </td>
+				<td> 과목 </td>
+				<td> 중간 </td>
+				<td> 기말 </td>
+				<td> 출석 </td>
+				<td> 레포트 </td>
+				<td> 기타 </td>
+				<td> 총점 </td>
+				<td> 학점 </td>
+			</tr>
+		</table>
+	</form>
+</section>
+<jsp:include page="footer.jsp"></jsp:include>
+</body>
+</html>
