@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<jsp:include page="header.jsp"></jsp:include>
+<section style="position: fixed; top: 60px; width: 100%;">
+	<h2 style="text-align: center;">수강신청</h2>
+	<form style="display: flex; justify-content: center; text-align: center;">
+	<table border="1" style="width: 500px;">
+		<tr>
+			<td> 수강월 </td>
+			<td> <input type="text" name="resist_month">예)202203 </td>
+		</tr>
+	</table>
+	</form>
+</section>
+<jsp:include page="footer.jsp"></jsp:include>
+</body>
+</html>

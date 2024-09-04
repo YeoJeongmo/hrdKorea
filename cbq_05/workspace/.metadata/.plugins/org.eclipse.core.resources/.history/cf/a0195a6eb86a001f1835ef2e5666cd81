@@ -1,0 +1,7 @@
+function addCheck(){
+	if(frm.resist_month.value.length == 0){
+		alert("수강월이 입력되지 않았습니다.");
+		frm.resist_month.focus();
+		return false;
+	}
+}

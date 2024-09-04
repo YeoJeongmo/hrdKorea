@@ -1,0 +1,26 @@
+<%@page import="DBPKG.Util"%>
+<%@page import="java.sql.*"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+request.setCharacterEncoding("UTF-8");
+String resist_month = request.getParameter("resist_month");
+String c_no = request.getParameter("c_no");
+String class_area = request.getParameter("class_area");
+String tuition = request.getParameter("tuition");
+String teacher_code = request.getParameter("teacher_code");
+
+try{
+	Connection conn = Util.getConnection();
+	String sql = "insert into tbl_class_202201 values (?, ?, ?, ?, ?)";
+	PreparedStatement pstmt = conn.prepareStatement(sql);
+	pstmt.setString(1, resist_month);
+	pstmt.setString(1, c_no);
+	pstmt.setString(1, class_area);
+	pstmt.setString(1, tuition);
+	pstmt.setString(1, teacher_code);
+	
+} catch (Exception e){
+	e.printStackTrace();
+}
+%>

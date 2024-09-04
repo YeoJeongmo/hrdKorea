@@ -1,0 +1,19 @@
+function addCheck(){
+	if(frm.resist_month.value.length == 0){
+		alert("수강월이 입력되지 않았습니다.");
+		frm.resist_month.focus();
+		return false;
+	} else if(frm.c_name.value == 0){
+		alert("회원명이 입력되지 않았습니다.");
+		frm.c_name.focus();
+		return false;
+	} else if(frm.class_area[0].checked == false){
+		alert("강의장소가 선택되지 않았습니다.");
+		frm.class_area[0].focus();
+		return false;
+	} else if(frm.class_name.value == 0){
+		alert("회원명이 입력되지 않았습니다.");
+		frm.class_name.focus();
+		return false;
+	}
+}

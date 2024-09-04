@@ -1,0 +1,3 @@
+INDEX VERSION 1.134
+C:\cbq_05\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4121149721.index
+\HRD_1\src\main\java
